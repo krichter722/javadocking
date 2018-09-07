@@ -3,7 +3,7 @@
     <!--@TODO: migrate generation of files and resource files in docs-->
     
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.javadocking</groupId>
+    <groupId>com.github.cogman</groupId>
     <artifactId>javadocking-parent</artifactId>
     <version>1.6.0</version>
     <packaging>pom</packaging>
@@ -17,6 +17,15 @@
         <module>javadocking</module>
         <module>javadocking-samples</module>
     </modules>
+
+	<licenses>
+		<license>
+			<name>GNU General Public License, version 2</name>
+			<url>https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
     <build>
         <plugins>
             <plugin>
