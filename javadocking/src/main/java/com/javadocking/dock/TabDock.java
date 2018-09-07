@@ -31,7 +31,6 @@ import com.javadocking.drag.DragListener;
 import com.javadocking.event.DockableEvent;
 import com.javadocking.event.DockingEventSupport;
 import com.javadocking.event.DockingListener;
-import com.javadocking.util.JvmVersionUtil;
 import com.javadocking.util.PropertiesUtil;
 import com.javadocking.util.SwingUtil;
 
@@ -266,15 +265,8 @@ public class TabDock extends JPanel implements LeafDock, DockableHider
 
 			// Add the component in a tab and select the component.
 			dockableToAdd.setState(DockableState.NORMAL, this);
-			if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-			{
-				Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(dockableToAdd, getHeaderPosition());
-				TabDockV6Addition.addTab(tabbedPane, dockablePanel, header);
-			}
-			else
-			{
-				tabbedPane.addTab(dockableToAdd.getTitle(), dockableToAdd.getIcon(), dockablePanel);
-			}
+			Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(dockableToAdd, getHeaderPosition());
+			TabDockV6Addition.addTab(tabbedPane, dockablePanel, header);
 			if (dockableToAdd.getDescription() != null)
 			{
 				tabbedPane.setToolTipTextAt(tabbedPane.getTabCount() - 1, dockableToAdd.getDescription());
@@ -315,15 +307,8 @@ public class TabDock extends JPanel implements LeafDock, DockableHider
 					
 					// Add the child dockable as tab.
 					childDockable.setState(DockableState.NORMAL, this);
-					if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-					{
-						Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(childDockable, getHeaderPosition());
-						TabDockV6Addition.addTab(tabbedPane, dockablePanel, header);
-					}
-					else
-					{
-						tabbedPane.addTab(childDockable.getTitle(), childDockable.getIcon(), dockablePanel);
-					}
+					Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(childDockable, getHeaderPosition());
+					TabDockV6Addition.addTab(tabbedPane, dockablePanel, header);
 					if (childDockable.getDescription() != null)
 					{
 						tabbedPane.setToolTipTextAt(tabbedPane.getTabCount() - 1, childDockable.getDescription());
@@ -419,10 +404,7 @@ public class TabDock extends JPanel implements LeafDock, DockableHider
 
 					// Remove the dockable.
 					tabbedPane.remove(index);
-					if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-					{
-						TabDockV6Addition.repaintTabComponents(tabbedPane);
-					}
+					TabDockV6Addition.repaintTabComponents(tabbedPane);
 					dockableToRemove.setState(DockableState.CLOSED, null);
 					
 					// Inform the listeners about the removal.
@@ -657,15 +639,8 @@ public class TabDock extends JPanel implements LeafDock, DockableHider
 		
 		// Set the new index.
 		tabbedPane.removeTabAt(previousTabIndex);
-		if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-		{
-			Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(dockableToMove, getHeaderPosition());
-			TabDockV6Addition.insertTab(tabbedPane, newTabIndex, dockablePanel, header);
-		}
-		else
-		{
-			tabbedPane.insertTab(dockableToMove.getTitle(), dockableToMove.getIcon(), dockablePanel, null, newTabIndex);
-		}
+		Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(dockableToMove, getHeaderPosition());
+		TabDockV6Addition.insertTab(tabbedPane, newTabIndex, dockablePanel, header);
 
 		tabbedPane.setSelectedIndex(newTabIndex);
 		
@@ -715,15 +690,8 @@ public class TabDock extends JPanel implements LeafDock, DockableHider
 			// Insert a tab with the dockable.
 			// Add the component in a tab and select the component.
 			dockableToAdd.setState(DockableState.NORMAL, this);
-			if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-			{
-				Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(dockableToAdd, getHeaderPosition());
-				TabDockV6Addition.insertTab(tabbedPane, tabPosition, dockablePanel, header);
-			}
-			else
-			{
-				tabbedPane.insertTab(dockableToAdd.getTitle(), dockableToAdd.getIcon(), dockablePanel, null, tabPosition);
-			}
+			Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(dockableToAdd, getHeaderPosition());
+			TabDockV6Addition.insertTab(tabbedPane, tabPosition, dockablePanel, header);
 			if (dockableToAdd.getDescription() != null)
 			{
 				tabbedPane.setToolTipTextAt(tabPosition, dockableToAdd.getDescription());
@@ -764,15 +732,8 @@ public class TabDock extends JPanel implements LeafDock, DockableHider
 					// Insert a tab with the child dockable.
 					// Add the component in a tab and select the component.
 					childDockable.setDock(this);
-					if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-					{
-						Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(childDockable, getHeaderPosition());
-						TabDockV6Addition.insertTab(tabbedPane, tabPosition, childDockablePanel, header);
-					}
-					else
-					{
-						tabbedPane.insertTab(childDockable.getTitle(), null, childDockablePanel, null, tabPosition);
-					}
+					Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(childDockable, getHeaderPosition());
+					TabDockV6Addition.insertTab(tabbedPane, tabPosition, childDockablePanel, header);
 					
 					if (childDockable.getDescription() != null)
 					{
@@ -1129,10 +1090,7 @@ public class TabDock extends JPanel implements LeafDock, DockableHider
 
 		public void stateChanged(ChangeEvent changeEvent)
 		{
-			if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-			{
-				TabDockV6Addition.repaintTabComponents(tabbedPane);
-			}
+			TabDockV6Addition.repaintTabComponents(tabbedPane);
 		}
 		
 	}

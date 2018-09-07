@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.javadocking</groupId>
     <artifactId>javadocking-parent</artifactId>
-    <version>1.5.0</version>
+    <version>1.6.0</version>
     <packaging>pom</packaging>
     <name>javadocking-parent</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <modules>
         <module>javadocking</module>
@@ -33,7 +33,7 @@
                             <goal>copy</goal>
                         </goals>
                         <configuration>
-                            <sourceFile>javadocking/target/javadocking-1.5.0.jar</sourceFile>
+                            <sourceFile>javadocking/target/javadocking-1.6.0.jar</sourceFile>
                             <destinationFile>${basedir}/javadocking.jar</destinationFile>
                         </configuration>
                     </execution>
@@ -44,7 +44,7 @@
                             <goal>copy</goal>
                         </goals>
                         <configuration>
-                            <sourceFile>javadocking-samples/target/javadocking-samples-1.5.0.jar</sourceFile>
+                            <sourceFile>javadocking-samples/target/javadocking-samples-1.6.0.jar</sourceFile>
                             <destinationFile>${basedir}/samples.jar</destinationFile>
                         </configuration>
                     </execution>
