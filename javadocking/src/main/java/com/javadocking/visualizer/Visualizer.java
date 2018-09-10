@@ -75,7 +75,7 @@ public interface Visualizer
 	 * Gets the visualized dockable with the specified index.
 	 * 
 	 * @return 		The visualized dockable with the specified index.
-	 * @throws 		IndexOutOfBoundsException 	If the index is out of range (index < 0 || index >= getvisualizedDockableCount()).
+	 * @throws 		IndexOutOfBoundsException 	If the index is out of range (index &lt; 0 || index &gt;= getvisualizedDockableCount()).
 	 */
 	public Dockable getVisualizedDockable(int index) throws IndexOutOfBoundsException;
 	

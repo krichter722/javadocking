@@ -34,7 +34,7 @@ import com.javadocking.util.DockingUtil;
  * <li>move dockables to other docks.</li>
  * <li>remove dockables from docks.</li>
  * </ul>
- * </p>
+ *
  * <p>
  * It does not only execute these actions, but it also informs the listeners of the dockable
  * about the docking changes.
@@ -91,7 +91,7 @@ public class DockingExecutor
 	 * 		</ul>
 	 * </li>
 	 * </ul>
-	 * </p>
+	 *
 	 * <p>
 	 * Finally, a dockable event is fired that informs the listeners of the dockable that the docking has changed.
 	 * </p>
@@ -204,7 +204,7 @@ public class DockingExecutor
 	 * 		</ul>
 	 * </li>
 	 * </ul>
-	 * </p>
+	 *
 	 * <p>
 	 * Finally, a dockable event is fired that informs the listeners of the dockable that the docking has changed.
 	 * </p>

@@ -22,7 +22,7 @@ public interface CompositeDockable extends Dockable
 	 * Gets the child dockable with the specified index.
 	 * 
 	 * @return 		The child dockable with the specified index.
-	 * @throws 		IndexOutOfBoundsException 	If the index is out of range (index < 0 || index >= getDockableCount()).
+	 * @throws 		IndexOutOfBoundsException 	If the index is out of range (index &lt; 0 || index &gt;= getDockableCount()).
 	 */
 	public Dockable getDockable(int index) throws IndexOutOfBoundsException;
 	

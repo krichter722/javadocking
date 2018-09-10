@@ -71,7 +71,6 @@ public interface Dock
 	 * <li>{@link Priority#CAN_DOCK_WITH_PRIORITY}</li>
 	 * <li>{@link Priority#CAN_DOCK_WITH_HIGH_PRIORITY}</li>
 	 * </ul>
-	 * </p>
 	 * 
 	 * @param 	dockable 			The dockable that will be added.
 	 * @param 	relativeLocation 	The location where the dockable will be added.

@@ -34,7 +34,6 @@ import com.javadocking.event.DockingEvent;
 import com.javadocking.event.DockingEventSupport;
 import com.javadocking.event.DockingListener;
 import com.javadocking.util.DockingUtil;
-import com.javadocking.util.JvmVersionUtil;
 import com.javadocking.util.PropertiesUtil;
 import com.javadocking.util.SwingUtil;
 
@@ -62,7 +61,7 @@ import com.javadocking.util.SwingUtil;
  * 		If the dockable is a {@link CompositeDockable}, but a child dock could not be created for the composite,
  * 		the dockable can be added, if a child dock can be created for every child dockable of the composite.</li>
  * </ul>
- * </p>
+ *
  * <p>
  * When a dockable is added, a child dock is created with the <code>childDockFactory</code>. The dockable is added to 
  * the child dock.
@@ -177,7 +176,7 @@ public class CompositeTabDock extends JPanel implements CompositeDock
 	 * 		If the dockable is a {@link CompositeDockable}, but a child dock could not be created for the composite,
 	 * 		the dockable can be added, if a child dock can be created for every child dockable of the composite.</li>
 	 * </ul>
-	 * </p>
+	 *
 	 */
 	public int getDockPriority(Dockable dockable, Point relativeLocation)
 	{
@@ -294,15 +293,8 @@ public class CompositeTabDock extends JPanel implements CompositeDock
 			dockingEventSupport.fireDockingWillChange(new ChildDockEvent(this, null, this, childDock));
 
 			// Add the component in a tab and select the tab.
-			if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-			{
-				Component header = (Component)DockingManager.getComponentFactory().createCompositeTabDockHeader(childDock, getHeaderPosition());
-				TabDockV6Addition.addTab(tabbedPane, (Component)childDock, header);
-			}
-			else
-			{
-				tabbedPane.addTab(getTitle(dockableToAdd), (Component)childDock);
-			}
+			Component header = (Component)DockingManager.getComponentFactory().createCompositeTabDockHeader(childDock, getHeaderPosition());
+			TabDockV6Addition.addTab(tabbedPane, (Component)childDock, header);
 			if (dockableToAdd.getDescription() != null)
 			{
 				tabbedPane.setToolTipTextAt(tabbedPane.getTabCount() - 1, dockableToAdd.getDescription());
@@ -344,15 +336,8 @@ public class CompositeTabDock extends JPanel implements CompositeDock
 					dockingEventSupport.fireDockingWillChange(new ChildDockEvent(this, null, this, childDock));
 
 					// Add the child dockable as tab.
-					if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-					{
-						Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(childDockable, getHeaderPosition());
-						TabDockV6Addition.addTab(tabbedPane, (Component)childDock, header);
-					}
-					else
-					{
-						tabbedPane.addTab(childDockable.getTitle(), (Component)childDock);
-					}
+					Component header = (Component)DockingManager.getComponentFactory().createTabDockHeader(childDockable, getHeaderPosition());
+					TabDockV6Addition.addTab(tabbedPane, (Component)childDock, header);
 					if (childDockable.getDescription() != null)
 					{
 						tabbedPane.setToolTipTextAt(tabbedPane.getTabCount() - 1, childDockable.getDescription());
@@ -549,17 +534,9 @@ public class CompositeTabDock extends JPanel implements CompositeDock
 		dockingEventSupport.fireDockingWillChange(new ChildDockEvent(this, null, this, childDock));
 
 		// Add the component in a tab and select the tab.
-		if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-		{
-			Component header = (Component)DockingManager.getComponentFactory().createCompositeTabDockHeader(childDock, getHeaderPosition());
-			TabDockV6Addition.insertTab(tabbedPane, tabPosition, (Component)childDock, header);
-		}
-		else
-		{
-			Dockable dockableForDock = DockingUtil.createDockable(childDock);
-			tabbedPane.insertTab(getTitle(dockableForDock), null, (Component)childDock, "", tabPosition);
-		}
-		
+		Component header = (Component)DockingManager.getComponentFactory().createCompositeTabDockHeader(childDock, getHeaderPosition());
+		TabDockV6Addition.insertTab(tabbedPane, tabPosition, (Component)childDock, header);
+
 		tabbedPane.setSelectedComponent((Component)childDock);
 		
 		// Inform the listeners.
@@ -815,7 +792,7 @@ public class CompositeTabDock extends JPanel implements CompositeDock
 	 * <li>{@link Position#LEFT}</li>
 	 * <li>{@link Position#RIGHT}</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * <p>
 	 * The default value is {@link Position#TOP}.
 	 * </p>
@@ -853,7 +830,7 @@ public class CompositeTabDock extends JPanel implements CompositeDock
 	 * <li>{@link Position#LEFT}</li>
 	 * <li>{@link Position#RIGHT}</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * 
 	 * @param headerPosition	The position where the headers of the docks are placed.
 	 * @throws	IllegalArgumentException If the given postion is not Position.TOP, Position.BOTTOM, Position.LEFT or Position.RIGHT.
@@ -969,10 +946,7 @@ public class CompositeTabDock extends JPanel implements CompositeDock
 
 		public void stateChanged(ChangeEvent changeEvent)
 		{
-			if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-			{
-				TabDockV6Addition.repaintTabComponents(tabbedPane);
-			}
+			TabDockV6Addition.repaintTabComponents(tabbedPane);
 		}
 		
 	}
@@ -1004,16 +978,8 @@ public class CompositeTabDock extends JPanel implements CompositeDock
 				if (getChildDock(index).equals(childDock))
 				{
 					// Add the component in a tab and select the tab.
-					if (JvmVersionUtil.getVersion() >= JvmVersionUtil.VERSION_6_OR_MORE)
-					{
-						Component header = (Component)DockingManager.getComponentFactory().createCompositeTabDockHeader(childDock, getHeaderPosition());
-						TabDockV6Addition.setTabComponentAt(tabbedPane, index, header);
-					}
-					else
-					{
-						Dockable dockableForDock = DockingUtil.createDockable(childDock);
-						tabbedPane.setTitleAt(index, getTitle(dockableForDock));
-					}
+					Component header = (Component)DockingManager.getComponentFactory().createCompositeTabDockHeader(childDock, getHeaderPosition());
+					TabDockV6Addition.setTabComponentAt(tabbedPane, index, header);
 				}
 			}
 		}

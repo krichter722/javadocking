@@ -56,7 +56,7 @@ import com.javadocking.util.SwingUtil;
  * </ul>
  * When a dockable is added, a child dock is created with the 'childDockFactory'. The dockable is added to 
  * the child dock. The child dock is put in a floating window.
- * </p>
+ *
  * <p>
  * There is an order for the floating child docks. Children with a lower index are on top of children with a higher
  * index.
@@ -158,7 +158,7 @@ public class FloatDock implements CompositeDock
 	 * <li>the dockable has {@link DockingMode#FLOAT} as one of its possible docking modes.</li>
 	 * <li>the child dock factory can create a child dock for the dockable.</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * <p>
 	 * When the dockable can be added the value of the property
 	 * <code>dockPriority</code> is returned.

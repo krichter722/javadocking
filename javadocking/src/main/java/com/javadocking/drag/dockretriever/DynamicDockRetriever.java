@@ -34,10 +34,9 @@ import com.javadocking.util.SwingUtil;
  * <ul>
  * <li>should inherit from the java.awt.Component class,
  * <li>or should be a {@link com.javadocking.dock.FloatDock}.
- * <ul>
+ * </ul>
  * Other type of docks will not be found by this retriever.
- * </p>
- * 
+ *
  * @author Heidi Rakels.
  */
 public class DynamicDockRetriever implements DockRetriever

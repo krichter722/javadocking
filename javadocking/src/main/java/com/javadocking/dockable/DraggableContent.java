@@ -22,7 +22,6 @@ import com.javadocking.drag.DragListener;
  *		this.addMouseMotionListener(dragListener);
  *
  * </pre></blockquote>
- * </p>
  * 
  * @author Heidi Rakels.
  */

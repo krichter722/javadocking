@@ -58,7 +58,7 @@ import com.javadocking.util.SwingUtil;
  * <li>all of its child dockables have <code>horizontalDockingMode</code> or <code>verticalDockingMode</code> as possible docking mode.</li>
  * <li>all of its child dockables have a content component that is not null.</li>
  * </ul>
- * </p>
+ *
  * <p>
  * The size of all the child dockables is the same when the <code>grid</code> property
  * is set to true, otherwise the size of the different child dockables will be according to the
@@ -216,7 +216,7 @@ public class LineDock extends JPanel implements LeafDock
 	 * <li>the abstract method {@link #checkDockingModes(Dockable)} returns true for the composite dockable.</li>
 	 * <li>all of its child dockables have a content component that is not null.</li>
 	 * </ul>
-	 * </p>
+	 *
 	 */
 	public int getDockPriority(Dockable dockable, Point relativeLocation)
 	{
@@ -1076,7 +1076,7 @@ public class LineDock extends JPanel implements LeafDock
 	 * @param	dockable				The dockable to add.
 	 * @return 							True is returned if we have a horizontal dock orientation 
 	 * 									(ORIENTATION_HORIZONTAL) and if the dockable has <code>horizontalDockingMode</code>
-	 * 									as possible docking mode.<br/>
+	 * 									as possible docking mode.<br>
 	 * 									True is also returned if we have a vertical dock orientation 
 	 * 									(ORIENTATION_VERTICAL) and if the dockable has <code>verticalDockingMode</code> 
 	 * 									as possible docking mode.

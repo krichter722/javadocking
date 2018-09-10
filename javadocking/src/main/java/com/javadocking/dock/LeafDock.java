@@ -65,7 +65,7 @@ public interface LeafDock extends Dock
 	 * 
 	 * @param 	index 	The index of the dockable
 	 * @return 			The dockable with the specified index that is docked in this dock.
-	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index < 0 || index >= getDockableCount()).
+	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index &lt; 0 || index &gt;= getDockableCount()).
 	 */
 	public Dockable getDockable(int index) throws IndexOutOfBoundsException;
 	

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.javadocking</groupId>
+    <groupId>com.github.cogman</groupId>
     <artifactId>javadocking-samples</artifactId>
-    <version>1.5.0</version>
+    <version>1.7.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>javadocking-samples</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.javadocking</groupId>
+            <groupId>com.github.cogman</groupId>
             <artifactId>javadocking</artifactId>
-            <version>1.5.0</version>
+            <version>1.7.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.jfree</groupId>
@@ -24,9 +24,9 @@
             <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>com.nilo</groupId>
+            <groupId>net.sf.squirrel-sql.thirdparty-non-maven</groupId>
             <artifactId>nimrodlf</artifactId>
-            <version>1.2d</version>
+            <version>1.1</version>
         </dependency>
     </dependencies>
     <build>
@@ -34,10 +34,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <debug>true</debug>
-                </configuration>
+                <version>3.8.0</version>
             </plugin>
         </plugins>
     </build>

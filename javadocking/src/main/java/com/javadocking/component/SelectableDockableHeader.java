@@ -20,16 +20,15 @@ import com.javadocking.dockable.action.ShowActionMode;
 /**
  * <p>
  * A header for a dockable that can be selected.
- * </p>
+ *
  * <p>
  * It contains:
  * <ul>
- * </li>a label with the title of the dockable. 
- * </li>the icon of the dockable, if there is one.
- * </li>the buttons with the first array of actions of the dockable, if there are actions.
- * <ul>
- * </p>
- * 
+ * <li>a label with the title of the dockable.</li>
+ * <li>the icon of the dockable, if there is one.</li>
+ * <li>the buttons with the first array of actions of the dockable, if there are actions.</li>
+ * </ul>
+ *
  * @author Heidi Rakels.
  */
 public class SelectableDockableHeader extends JPanel implements SelectableHeader

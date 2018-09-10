@@ -20,7 +20,7 @@ import com.javadocking.dock.Dock;
  * <li>When a dockable or child dock is moved in its dock, the origin dock and destination dock are equal.</li>
  * <li>When a dockable or child dock is moved to another dock, the origin dock and destination dock are different.</li>
  * </ul>
- * </p>
+ *
  * 
  * @author Heidi Rakels.
  */

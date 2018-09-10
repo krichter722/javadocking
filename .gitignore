@@ -1,3 +1,4 @@
 target/
 javadocking/target/
 javadocking-samples/target/
+.idea

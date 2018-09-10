@@ -58,7 +58,7 @@ import com.javadocking.util.SwingUtil;
  * <li>The child dock at the right: {@link Position#RIGHT}.</li>
  * <li>The child dock at the left: {@link Position#LEFT}.</li>
  * </ul>
- * </p>
+ *
  * <p>
  * A dockable can only be added if it has as one of its docking modes:
  * <ul>
@@ -68,7 +68,7 @@ import com.javadocking.util.SwingUtil;
  * <li>{@link DockingMode#BOTTOM}</li> 
  * </ul>
  * It can only be added in a position that corresponds with one of its docking modes.
- * </p>
+ *
  * <p>
  * If the mouse is inside a priority rectangle, the dockable can be docked with priority (see {@link Priority#CAN_DOCK_WITH_PRIORITY}).
  * When the mouse is inside the panel of this dock, but outside the priority rectangles,
@@ -234,7 +234,7 @@ public class SplitDock extends JPanel implements CompositeDock
 	 * <li>the dock is not full.</li>
 	 * <li>if the dock factory can create a child dock for the given dockable.</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * <p>
 	 * There are also some optimizations done. We want to prevent that dockables
 	 * are removed from this dock and added to this dock again at the same
@@ -1446,7 +1446,7 @@ public class SplitDock extends JPanel implements CompositeDock
 	 * <li>{@link Position#BOTTOM}</li> 
 	 * <li>{@link Position#CENTER}</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * 
 	 * @param 	relativeLocation			The mouse location, where the dockable will be added.
 	 * @return 								The position where the dockable should be docked in the dock.

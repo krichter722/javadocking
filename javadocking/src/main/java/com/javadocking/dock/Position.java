@@ -23,7 +23,6 @@ import java.util.StringTokenizer;
  * <li> the z-order of the child.
  * </ul>
  *
- * </p>
  * <p>
  * This class describes also the integer constants for special positions of dockables or docks in other docks.
  * The possible positions are:
@@ -34,7 +33,7 @@ import java.util.StringTokenizer;
  * <li> BOTTOM
  * <li> CENTER
  * </ul>
- * </p>
+ *
  * 
  * @author Heidi Rakels.
  */
@@ -148,7 +147,7 @@ public class Position
 	 * 
 	 * @param 	dimension 	The dimension for which the position is retrieved.
 	 * @return				The position integer for the given dimension.
-	 * @throws 	IllegalArgumentException If the given dimension is < 0 or >= getDimensions().
+	 * @throws 	IllegalArgumentException If the given dimension is &lt; 0 or &gt;= getDimensions().
 	 */
 	public int getPosition(int dimension)
 	{

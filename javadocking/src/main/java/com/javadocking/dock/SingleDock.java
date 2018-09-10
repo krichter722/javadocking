@@ -56,7 +56,7 @@ import com.javadocking.visualizer.Externalizer;
  * <li>its child dockable has a content component that is not null.</li>
  * <li>this dock is not already full.</li>
  * </ul>
- * </p>
+ *
  * <p>
  * If the mouse is inside the priority rectangle, the dockable can be docked with priority (see {@link Priority#CAN_DOCK_WITH_PRIORITY}).
  * When the mouse is inside the panel of this dock, but outside the priority rectangle,
@@ -654,7 +654,7 @@ public class SingleDock extends JPanel implements LeafDock, DockableHider, Exter
 	 * <li>{@link Position#LEFT}</li>
 	 * <li>{@link Position#RIGHT}</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * <p>
 	 * The default value is {@link Position#TOP}.
 	 * </p>
@@ -678,7 +678,7 @@ public class SingleDock extends JPanel implements LeafDock, DockableHider, Exter
 	 * <li>{@link Position#LEFT}</li>
 	 * <li>{@link Position#RIGHT}</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * 
 	 * @param headerPosition	The position where the header is placed.
 	 * @throws	IllegalArgumentException If the given postion is not Position.TOP, Position.BOTTOM, Position.LEFT or Position.RIGHT.

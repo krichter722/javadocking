@@ -77,7 +77,7 @@ public interface DockingPath
 	 * 
 	 * @param 	index 		The index of the dock in the path.
 	 * @return				The dock with the given index in the path. Not null.
-	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index < 0 || index >= getDockCount()).
+	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index &lt; 0 || index &gt;= getDockCount()).
 	 */
 	public Dock getDock(int index);
 	
@@ -89,7 +89,7 @@ public interface DockingPath
 	 * 						<code>index</code> if the given index is smaller than <code>getDockCount() - 1</code>. 
 	 * 						The last position is usually the position of the dockable in the deepest dock of the path, if this
 	 * 						deepest dock is a leaf dock. Not null.
-	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index < 0 || index >= getDockCount()).
+	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index &lt; 0 || index &gt;= getDockCount()).
 	 */
 	public Position getPositionInDock(int index);
 	
