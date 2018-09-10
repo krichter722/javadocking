@@ -13,7 +13,7 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.javadocking</groupId>
+            <groupId>com.github.cogman</groupId>
             <artifactId>javadocking</artifactId>
             <version>1.6.0</version>
         </dependency>

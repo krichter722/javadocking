@@ -20,6 +20,11 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
+	<developers>
+		<developer>
+			<name>Thomas May</name>
+		</developer>
+	</developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
