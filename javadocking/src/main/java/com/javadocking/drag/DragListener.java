@@ -25,8 +25,8 @@ import javax.swing.event.MouseInputListener;
  * <li>cancel dragging
  * </ul> 
  * They delegate the implementation of those actions to a {@link com.javadocking.drag.Dragger}.
- * </p>
- * 
+ *
+ *
  * @author Heidi Rakels.
  */
 public interface DragListener extends MouseListener, MouseInputListener

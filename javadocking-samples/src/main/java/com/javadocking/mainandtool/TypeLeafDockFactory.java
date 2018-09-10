@@ -41,7 +41,7 @@ import com.javadocking.util.PropertiesUtil;
  * <li>{@link LineDock} for {@link DockingMode#VERTICAL_LINE}.</li>
  * <li>{@link GridDock} for {@link DockingMode#GRID}.</li>
  * </ul>
- * </p>
+ *
  * 
  * @author Heidi Rakels
  */

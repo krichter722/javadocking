@@ -37,7 +37,7 @@ public interface DockableHider extends LeafDock
 	 * 
 	 * @param	index				The index of the hidden dockable.
 	 * @return						The hidden dockable, if there is one; otherwise null.
-	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index < 0 || index >= getHiddenDockableCount()).
+	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index &lt; 0 || index &gt;= getHiddenDockableCount()).
 	 */
 	public Dockable getHiddenDockable(int index);
 	

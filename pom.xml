@@ -25,40 +25,4 @@
 			<distribution>repo</distribution>
 		</license>
 	</licenses>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.coderplus.maven.plugins</groupId>
-                <artifactId>copy-rename-maven-plugin</artifactId>
-                <version>1.0.1</version>
-                <executions>
-                    <execution>
-                        <!--copy jars in order to keep project structure of
-                        initial ant-based project-->
-                        <id>copy-jars</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <sourceFile>javadocking/target/javadocking-1.6.0.jar</sourceFile>
-                            <destinationFile>${basedir}/javadocking.jar</destinationFile>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-jars-samples</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <sourceFile>javadocking-samples/target/javadocking-samples-1.6.0.jar</sourceFile>
-                            <destinationFile>${basedir}/samples.jar</destinationFile>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 </project>

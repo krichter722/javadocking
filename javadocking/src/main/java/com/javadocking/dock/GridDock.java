@@ -59,7 +59,7 @@ import com.javadocking.util.SwingUtil;
  * <li>every dockable of the the composite dockable has <code>dockingMode</code> as one of its possible docking modes..</li>
  * <li>every dockable of the the composite dockable a content component that is not null.</li>
  * </ul>
- * </p>
+ *
  * <p>
  * The {@link com.javadocking.dock.Position} for dockables of this dock are one-dimensional.
  * The first position value of a child dockable is between 0 and the number of child dockables minus 1, 
@@ -184,7 +184,7 @@ public class GridDock extends JPanel implements LeafDock
 	 * <li>the abstract method {@link #checkDockingModes(Dockable)} returns true for the dockable.</li>
 	 * <li>all of its child dockables have a content component that is not null.</li>
 	 * </ul>
-	 * </p>
+	 *
 	 */
 	public int getDockPriority(Dockable dockable, Point relativeLocation)
 	{

@@ -399,7 +399,7 @@ public class DefaultCompositeDockable implements CompositeDockable
 	 * <p>
 	 * Gets the possible states of the dockable. This can be a combination of constants defined by {@link DockableState}.
 	 * A combination is made by the bitwise or-operation on the integer constants.
-	 * <p>
+	 *
 	 * <p>
 	 * The default states are DockableState.CLOSED | DockableState.NORMAL | DockableState.MAXIMIZED | DockableState.MINIMIZED.
 	 * <p>
@@ -437,7 +437,7 @@ public class DefaultCompositeDockable implements CompositeDockable
 	/**
 	 * Sets the index of the selected dockable.
 	 * @param 	selectedIndex 	The index of the selected dockable.
-	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index < 0 || index >= getDockableCount()).
+	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index &lt; 0 || index &gt;= getDockableCount()).
 	 */
 	public void setSelectedIndex(int selectedIndex) throws IndexOutOfBoundsException
 	{

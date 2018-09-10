@@ -39,7 +39,7 @@ import com.javadocking.dockable.Dockable;
  * <li>maxImageSize</li>
  * <li>minReduceFactor</li>
  * </ul>
- * </p>
+ *
  * 
  * @author Heidi Rakels.
  */

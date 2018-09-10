@@ -49,8 +49,8 @@ import com.javadocking.util.SwingUtil;
  * <li>the dock factory can create a child dock for the given dockable. 
  * 		If the dockable is a {@link CompositeDockable}, but a child dock could not be created for the composite,
  * 		the dockable can be added, if a child dock can be created for every child dockable of the composite.</li>
- * </ul> 
- * </p>
+ * </ul>
+ *
  * <p>
  * When a dockable is added, a child dock is created with the 'childDockFactory'. The dockable is added to 
  * the child dock.
@@ -162,8 +162,8 @@ public class CompositeGridDock extends JPanel implements CompositeDock
 	 * <li>the dock factory can create a child dock for the given dockable. 
 	 * 		If the dockable is a {@link CompositeDockable}, but a child dock could not be created for the composite,
 	 * 		the dockable can be added, if a child dock can be created for every child dockable of the composite.</li>
-	 * </ul> 
-	 * <p>
+	 * </ul>
+	 *
 	 */
 	public int getDockPriority(Dockable dockable, Point relativeLocation)
 	{

@@ -61,7 +61,7 @@ import com.javadocking.util.SwingUtil;
  * 		If the dockable is a {@link CompositeDockable}, but a child dock could not be created for the composite,
  * 		the dockable can be added, if a child dock can be created for every child dockable of the composite.</li>
  * </ul>
- * </p>
+ *
  * <p>
  * When a dockable is added, a child dock is created with the <code>childDockFactory</code>. The dockable is added to 
  * the child dock.
@@ -176,7 +176,7 @@ public class CompositeTabDock extends JPanel implements CompositeDock
 	 * 		If the dockable is a {@link CompositeDockable}, but a child dock could not be created for the composite,
 	 * 		the dockable can be added, if a child dock can be created for every child dockable of the composite.</li>
 	 * </ul>
-	 * </p>
+	 *
 	 */
 	public int getDockPriority(Dockable dockable, Point relativeLocation)
 	{
@@ -792,7 +792,7 @@ public class CompositeTabDock extends JPanel implements CompositeDock
 	 * <li>{@link Position#LEFT}</li>
 	 * <li>{@link Position#RIGHT}</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * <p>
 	 * The default value is {@link Position#TOP}.
 	 * </p>
@@ -830,7 +830,7 @@ public class CompositeTabDock extends JPanel implements CompositeDock
 	 * <li>{@link Position#LEFT}</li>
 	 * <li>{@link Position#RIGHT}</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * 
 	 * @param headerPosition	The position where the headers of the docks are placed.
 	 * @throws	IllegalArgumentException If the given postion is not Position.TOP, Position.BOTTOM, Position.LEFT or Position.RIGHT.

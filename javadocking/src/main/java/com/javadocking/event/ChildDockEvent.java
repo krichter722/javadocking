@@ -15,7 +15,7 @@ import com.javadocking.dock.Dock;
  * <li>before the removing</li>
  * <li>after the removing</li>
  * </ul>
- * </p>
+ *
  * 
  * @author Heidi Rakels.
  */

@@ -264,7 +264,7 @@ public class ButtonDockable implements Dockable
 	 * <p>
 	 * Gets the possible states of the dockable. This can be a combination of constants defined by {@link DockableState}.
 	 * A combination is made by the bitwise or-operation on the integer constants.
-	 * <p>
+	 *
 	 * <p>
 	 * The default states are DockableState.CLOSED | DockableState.NORMAL.
 	 * <p>

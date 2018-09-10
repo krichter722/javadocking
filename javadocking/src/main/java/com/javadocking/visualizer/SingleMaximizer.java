@@ -37,7 +37,7 @@ import com.javadocking.util.PropertiesUtil;
  * When there is a maximized dockable, then this dockable is visible. 
  * The normal content is hidden behind the maximized dockable.
  * When there is no maximized dockable, then the normal content is visible.
- * </p>
+ *
  * <p>
  * When no dockable is maximized, the normal content is show in this panel.
  * When a dockable is maximized, the content of the dockable is shown,

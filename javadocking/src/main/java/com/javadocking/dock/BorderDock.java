@@ -46,7 +46,7 @@ import com.javadocking.util.SwingUtil;
  * <li>The child dock in the east: {@link Position#RIGHT}.</li>
  * <li>The child dock in the west: {@link Position#LEFT}.</li>
  * </ul>
- * </p>
+ *
  * <p>
  * A dockable can only be added if it has as one of its docking modes:
  * <ul>
@@ -56,7 +56,7 @@ import com.javadocking.util.SwingUtil;
  * <li><code>rightDockingMode</code></li>
  * </ul> 
  * It can only be added in a position that corresponds with one of its docking modes.
- * </p>
+ *
  * <p>
  * When a dockable is added, a child dock is created with the 'childDockFactory'. The dockable is added to 
  * the child dock.
@@ -246,7 +246,7 @@ public class BorderDock extends JPanel implements CompositeDock
 	 * <li>{@link DockingMode#BOTTOM}</li>
 	 * </ul> 
 	 * It can only be added in a position that corresponds with one of its docking modes.
-	 * </p>
+	 *
 	 * <p>
 	 * When there are already 5 child docks, the dockable cannot be added anymore.
 	 * </p>
@@ -524,7 +524,7 @@ public class BorderDock extends JPanel implements CompositeDock
 	 * <li>Position.RIGHT</li>
 	 * <li>Position.CENTER</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * <p>
 	 * If the position is not valid, the first free position of the dock is taken.
 	 * </p>
@@ -878,6 +878,7 @@ public class BorderDock extends JPanel implements CompositeDock
 	 * 						<li>{@link Position#TOP}</li>
 	 * 						<li>{@link Position#BOTTOM}</li>
 	 * 						</ul>
+	 * @return Child doc at given position
 	 */
 	public Dock getChildDockOfPosition(int position)
 	{
@@ -914,7 +915,7 @@ public class BorderDock extends JPanel implements CompositeDock
 	 * <li>{@link Position#TOP}</li> 
 	 * <li>{@link Position#BOTTOM}</li> 
 	 * </ul>
-	 * </p>
+	 *
 	 * 
 	 * @param relativePosition				The mouse location, where the dockable will be added.
 	 * @return 								The position where the dockable should be docked in the dock.

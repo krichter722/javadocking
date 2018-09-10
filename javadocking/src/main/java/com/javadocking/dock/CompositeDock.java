@@ -82,7 +82,7 @@ public interface CompositeDock extends Dock
 	 * 
 	 * @param 	index 			The index of the child dock.
 	 * @return 					The child dock with the specified index.
-	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index < 0 || index >= getChildDockCount()).
+	 * @throws 	IndexOutOfBoundsException 	If the index is out of range (index &lt; 0 || index &gt;= getChildDockCount()).
 	 */
 	public Dock getChildDock(int index) throws IndexOutOfBoundsException;
 

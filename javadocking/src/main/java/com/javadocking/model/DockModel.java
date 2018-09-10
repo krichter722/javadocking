@@ -30,7 +30,7 @@ import com.javadocking.visualizer.Visualizer;
  * <li>The ancestors of these leaf docks are {@link com.javadocking.dock.CompositeDock}s.</li> 
  * <li>The composite docks whose parents are null, are the root docks.</li>  
  * </ul>
- * </p>
+ *
  * <p>
  * This dock model contains the root docks. All docks of the model have one of the root docks as root. 
  * Every root dock of the model can be retrieved with a key.
@@ -78,7 +78,7 @@ public interface DockModel
 	 * 
 	 * @param 	index			The index of the owner window to retrieve.
 	 * @return 					The owner with the specified index in the dock model.
-	 * @throws IndexOutOfBoundsException 	If the index is out of range (index < 0 || index >= getOwnerCount()).
+	 * @throws IndexOutOfBoundsException 	If the index is out of range (index &lt; 0 || index &gt;= getOwnerCount()).
 	 */
 	public Window getOwner(int index);
 	

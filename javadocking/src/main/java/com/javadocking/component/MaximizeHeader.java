@@ -23,11 +23,10 @@ import com.javadocking.util.DockingUtil;
  * <p>
  * It contains:
  * <ul>
- * </li>a label with the title of the dockable that is docked in the dock. 
- * </li>the icon of the dockable that is docked in the dock.
- * </li>the buttons with the actions of the dockable, if there are actions.
- * <ul>
- * </p>
+ * <li>a label with the title of the dockable that is docked in the dock.</li>
+ * <li>the icon of the dockable that is docked in the dock.</li>
+ * <li>the buttons with the actions of the dockable, if there are actions.</li>
+ * </ul>
  * 
  * @author Heidi Rakels.
  */

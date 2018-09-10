@@ -64,7 +64,7 @@ import com.javadocking.util.SwingUtil;
  * <li>all of its child dockables have {@link DockingMode#TAB} as possible docking mode.</li>
  * <li>all of its child dockables have a content component that is not null.</li>
  * </ul>
- * </p>
+ *
  * <p>
  * If the mouse is inside the priority rectangle, the dockable can be docked with priority (see {@link Priority#CAN_DOCK_WITH_PRIORITY}).
  * When the mouse is inside the panel of this dock, but outside the priority rectangle,
@@ -165,7 +165,7 @@ public class TabDock extends JPanel implements LeafDock, DockableHider
 	 * <li>all of its child dockables have {@link DockingMode#TAB} as possible docking mode.</li>
 	 * <li>all of its child dockables have a content component that is not null.</li>
 	 * </ul>
-	 * </p>
+	 *
 	 */
 	public int getDockPriority(Dockable dockable, Point relativeLocation)
 	{
@@ -987,7 +987,7 @@ public class TabDock extends JPanel implements LeafDock, DockableHider
 	 * <li>{@link Position#LEFT}</li>
 	 * <li>{@link Position#RIGHT}</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * <p>
 	 * The default value is {@link Position#TOP}.
 	 * </p>
@@ -1025,7 +1025,7 @@ public class TabDock extends JPanel implements LeafDock, DockableHider
 	 * <li>{@link Position#LEFT}</li>
 	 * <li>{@link Position#RIGHT}</li>
 	 * </ul>
-	 * </p>
+	 *
 	 * 
 	 * @param headerPosition	The position where the headers of the dockables are placed.
 	 * @throws	IllegalArgumentException If the given postion is not Position.TOP, Position.BOTTOM, Position.LEFT or Position.RIGHT.
